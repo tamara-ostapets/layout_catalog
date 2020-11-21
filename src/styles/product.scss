@@ -1,19 +1,35 @@
 .product {
-  width: 200px;
   padding-left: 14px;
   padding-right: 14px;
-  border: 1px solid #f3f3f3;
+
+  width: 200px;
+
+  border: 1px solid $cardBorder;
   border-radius: 5px;
   background-color: #fff;
 
   &__image {
+    margin: 30px auto 41px 5px;
+
     width: 160px;
     height: 134px;
-    margin: 30px auto 41px 5px;
+
+    transition: transform 1s;
+
+    &:hover {
+      box-sizing: content-box;
+      padding: 10px 0 0;
+      margin: 13px auto 42px 1px;
+      transform: scale(1.2);
+
+      border: 3px solid $cardBorder;
+      border-radius: 4px;
+    }
   }
 
   &__description {
     margin-bottom: 5px;
+
     font-weight: 500;
     font-size: 12px;
     line-height: 15px;
@@ -21,6 +37,7 @@
 
   &__code {
     margin-bottom: 16px;
+
     font-weight: 400;
     font-size: 11px;
     line-height: 13px;
@@ -46,6 +63,7 @@
   &__cost-text {
     align-self: flex-end;
     margin-bottom: 1px;
+
     font-weight: 400;
     font-size: 11px;
     line-height: 13px;
