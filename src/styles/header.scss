@@ -1,27 +1,35 @@
 .nav {
-  font-size: 12px;
-  font-weight: 500;
-  background: #fff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(2, auto);
   justify-content: space-between;
   align-items: center;
-  width: 100%;
-  height: 60px;
   padding: 0 50px;
   margin-bottom: 50px;
 
+  width: 100%;
+  height: 60px;
+
+  font-size: 12px;
+  font-weight: 500;
+
+  background: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+
   &__logo-img {
+    margin-top: 3px;
     width: 40px;
     height: 40px;
   }
 
   &__list {
-    height: 100%;
     display: flex;
-    list-style-type: none;
-    text-transform: uppercase;
     padding: 0;
+
+    height: 100%;
+
+    text-transform: uppercase;
+
+    list-style-type: none;
   }
 
   &__item:not(:last-of-type) {
@@ -30,14 +38,17 @@
 
   &__link {
     position: relative;
-    text-decoration: none;
-    color: black;
-    line-height: 60px;
     display: inline-block;
 
+    color: black;
+    line-height: 60px;
+
+    text-decoration: none;
+
     &:hover {
-      color: $blue;
       cursor: pointer;
+
+      color: $blue;
     }
 
     &:active {
